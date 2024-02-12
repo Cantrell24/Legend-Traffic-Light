@@ -10,3 +10,42 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+body{
+    background-color: darkcyan;
+    display: flex; justify-content: center;
+    margin-top: 100px;
+}
+
+.traffic-light{
+    padding: 20px;
+    display: inline-block;
+    margin: auto;
+    background: rgb(0, 0, 0)
+}
+
+.light{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.red{ background: rgb(248, 0, 0);}
+.yellow{ background: rgb(252, 252, 0);}
+.green{ background: rgb(30, 241, 30);}
+
+.glow{
+    box-shadow: 0px 0px 100px 100px 
+}
+
+.glow {
+    animation: glowAnimation 0.5s infinite alternate;
+}
+
+@keyframes glowAnimation {
+    from {
+        box-shadow: 0 0 100px var(--glow-color); /* Using CSS variable for glow color */
+    }
+    to {
+        box-shadow: 0 0 100px var(--glow-color); /* Using CSS variable for glow color */
+    }
+}
